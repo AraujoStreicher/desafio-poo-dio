@@ -58,6 +58,28 @@ public class Main {
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
 
+
+        System.out.println("-------");
+        Bootcamp bootcamp2 = new Bootcamp();
+        bootcamp2.setNome("Bootcamp Python Developer");
+        bootcamp2.setDescricao("Descrição Bootcamp Python Developer");
+        bootcamp2.getConteudos().add(curso1);
+        bootcamp2.getConteudos().add(curso2);
+        bootcamp2.getConteudos().add(mentoria);
+
+        Dev devAna = new Dev();
+        devAna.setNome("Ana");
+        devAna.inscreverBootcamp(bootcamp);
+        devAna.inscreverBootcamp(bootcamp2);
+        System.out.println("Conteúdos Inscritos Ana:" + devAna.getConteudosInscritos());
+        devAna.progredir();
+        devAna.progredir();
+        devAna.progredir();
+        System.out.println("-");
+        System.out.println("Conteúdos Inscritos Ana:" + devAna.getConteudosInscritos());
+        System.out.println("Conteúdos Concluidos Ana:" + devAna.getConteudosConcluidos());
+        System.out.println("XP:" + devAna.calcularTotalXp());
+
     }
 
 }
